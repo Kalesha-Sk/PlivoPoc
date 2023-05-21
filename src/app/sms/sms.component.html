@@ -1,0 +1,17 @@
+<h1>Send SMS with Plivo</h1>
+
+<form>
+  <label for="src">Your phone number : </label>
+  <input type="text" id="src" name="src" [(ngModel)]="src" /><br /><br />
+
+  <label for="dst">Recipient's phone number : </label>
+  <input type="text" id="dst" name="dst" [(ngModel)]="dst" /><br /><br />
+
+  <label for="text">Message text : </label>
+  <input type="text" id="text" name="text" [(ngModel)]="text" /><br /><br />
+
+  <button type="button" (click)="sendSMS()">Send SMS</button>
+</form>
+
+<div *ngIf="messageSent">{{ messageSent }}</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>

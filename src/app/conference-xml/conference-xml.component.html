@@ -1,0 +1,26 @@
+<h1>Make a Conferene Call With Plivo XML</h1>
+
+<form>
+  <label for="from">Your phone number : </label>
+  <input type="text" id="from" name="from" [(ngModel)]="from" /><br /><br />
+
+  <label for="to">Recipient's phone number : </label>
+  <input type="text" id="to" name="to" [(ngModel)]="to" /><br /><br />
+
+  <label for="to">Add phone number to conference call : </label>
+  <select name="to" [(ngModel)]="to">
+    <option value="">Select a number</option>
+    <option value="+91 9515571383">+91 9515571383</option>
+    <option value="+91 7386880488">+91 7386880488</option>
+    <option value="+91 8106812387">+91 8106812387</option>
+    <option value="+91 8919175376">+91 8919175376</option>
+    <option value="+91 7702546926">+91 7702546926</option>
+    <option value="+91 7008122098">+91 7008122098</option>
+  </select><br /><br />
+
+  <button type="button" (click)="makeCall()">Make Call</button>
+</form>
+
+<div *ngIf="callInProgress">Call in progress...</div>
+<div *ngIf="callComplete">Call completed!</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>

@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+  color: white;
+  font-weight: 500;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  margin-top: 150px;
+  background-image: url("https://wallpapercave.com/wp/wp3172684.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  margin: 20px;
+  background-color:#93704d;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  height: 40px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+input{
+    background-color: #93704d;
+    border: 2px solid white;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 24px;
+}
+select {
+    background-color: #93704d;
+    border: 2px solid white;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 24px;
+}
+label{
+  color: maroon;
+  font-size: 24px;
+  font-weight: 600;
+}
+h1{
+  color: black;
+}
+

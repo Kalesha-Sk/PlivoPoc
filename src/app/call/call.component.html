@@ -1,0 +1,15 @@
+<h1>Make a call with Plivo</h1>
+
+<form>
+  <label for="from">Your phone number : </label>
+  <input type="text" id="from" name="from" [(ngModel)]="from" /><br /><br />
+
+  <label for="to">Recipient's phone number : </label>
+  <input type="text" id="to" name="to" [(ngModel)]="to" /><br /><br />
+
+  <button type="button" (click)="makeCall()">Make Call</button>
+</form>
+
+<div *ngIf="callInProgress">Call in progress...</div>
+<div *ngIf="callComplete">Call complete!</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
