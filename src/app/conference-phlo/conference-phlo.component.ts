@@ -4,19 +4,20 @@ import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 @Component({
-  selector: 'app-conference',
-  templateUrl: './conference.component.html',
-  styleUrls: ['./conference.component.scss']
+  selector: 'app-conference-phlo',
+  templateUrl: './conference-phlo.component.html',
+  styleUrls: ['./conference-phlo.component.scss']
 })
-export class ConferenceComponent {
-  private authId: string = '';
-  private authToken: string = '';
+export class ConferencePhloComponent {
+  private authId: string = 'MAYWVLMZBMZDJKYZBKYT';
+  private authToken: string = 'YzhjYmE4MGYzZDhmN2JjNTMyMmE1OTFlZWE2MWM3';
 
   public from: string = '';
   public to: string = '';
   public callInProgress: boolean = false;
   public callComplete: boolean = false;
   public errorMessage: string = '';
+  public phloUrl: string = 'https://phlorunner.plivo.com/v1/account/MAYWVLMZBMZDJKYZBKYT/phlo/18486b62-367b-466d-8321-b19f0efffda6';
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +35,7 @@ export class ConferenceComponent {
       to: this.to,
     };
 
-    this.http.post('', body, options)
+    this.http.post(this.phloUrl, body, options)
       .pipe(
         catchError((err) => {
           this.errorMessage = `Error making call: ${err.message}`;

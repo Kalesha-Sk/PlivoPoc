@@ -8,11 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CallComponent } from './call/call.component';
 import { ReceiveComponent } from './receive/receive.component';
-import { ConferenceComponent } from './conference/conference.component';
+import { ConferencePhloComponent } from './conference-phlo/conference-phlo.component';
 import { ConferenceXMLComponent } from './conference-xml/conference-xml.component';
+import { ConferenceComponent } from './conference/conference.component';
 
 @NgModule({
-  declarations: [AppComponent, SmsComponent, CallComponent, ReceiveComponent, ConferenceComponent, ConferenceXMLComponent],
+  declarations: [AppComponent, SmsComponent, CallComponent, ReceiveComponent, ConferencePhloComponent, ConferenceXMLComponent, ConferenceComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -19,10 +19,13 @@ export class AppComponent {
   receiveCall() {
     this.route.navigate(['receive']);
   }
-  conferenceCall() {
-    this.route.navigate(['conference']);
+  conferenceCallPhlo() {
+    this.route.navigate(['conferencePhlo']);
   }
   conferenceCallXml() {
     this.route.navigate(['conferenceXML']);
+  }
+  conferenceCall() {
+    this.route.navigate(['conference']);
   }
 }
